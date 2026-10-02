@@ -1,4 +1,4 @@
-.PHONY: install run debug clean lint lint-strict
+.PHONY: install run debug clean lint lint-strict gui
 
 install:
 	python3 -m pip install -r requirements.txt
@@ -19,3 +19,6 @@ lint:
 lint-strict:
 	flake8 .
 	mypy . --strict
+
+gui:
+	python3 main.py $(MAP) --gui
